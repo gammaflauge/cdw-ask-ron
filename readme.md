@@ -1,3 +1,3 @@
 # cdw-ask-ron
-pull cdw status from ready or not, make available externally
+quick app to post cdw status externally via heroku
 

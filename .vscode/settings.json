@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "c:\\Users\\devinem4\\Documents\\projects\\cdw-ask-ron\\venv\\Scripts\\python.exe",
+    "python.formatting.provider": "black",
+    "python.linting.lintOnSave": true
+}
