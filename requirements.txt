@@ -15,7 +15,7 @@ Jinja2==2.10.1
 lazy-object-proxy==1.4.2
 MarkupSafe==1.1.1
 mccabe==0.6.1
-PyCap==1.0.0
+PyCap==1.0.2
 pylint==2.4.2
 requests==2.22.0
 semantic-version==2.3.1
