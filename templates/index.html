@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}" />
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/cf2dafb05b.js" crossorigin="anonymous"></script>
+    <title>CDW Status</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CDW Status as of {{ as_of }}</h1>
+        <br>
+        <h2>Tables ({{ g2g_tables }}/{{ total_tables }})</h2>
+        <ul class="list-group">
+            {% for table in tables %}
+            {% if table.good_to_go %}
+            <span style="font-size: 2em; color: #20c997;">
+                <li class="list-group-item"><i class="fas fa-check-square"></i> {{ table.name }}</li>
+            </span>
+            {% else %}
+            <span style="font-size: 2em; color: #D01C65;">
+                <li class="list-group-item"><i class="fas fa-exclamation-triangle"></i> {{ table.name }}</li>
+            </span>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <br>
+        <h3>Workflows ({{ g2g_workflows }}/{{ total_workflows }})</h3>
+        <ul class="list-group">
+            {% for wf in workflows %}
+            {% if wf.good_to_go %}
+            <span style="font-size: 2em; color: #20c997;">
+                <li class="list-group-item"><i class="fas fa-check-square"></i> {{ wf.name }}</li>
+            </span>
+            {% else %}
+            <span style="font-size: 2em; color: #D01C65;">
+                <li class="list-group-item"><i class="fas fa-exclamation-triangle"></i> {{ wf.name }}</li>
+            </span>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
